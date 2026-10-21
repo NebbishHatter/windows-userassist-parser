@@ -1,12 +1,19 @@
 # Windows UserAssist Forensic Parser
 
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A cross-platform DFIR tool for extracting and analyzing Windows `UserAssist` registry artifacts from live systems or offline hives (`NTUSER.DAT`).
 
 *Кроссплатформенный инструмент цифровой криминалистики (DFIR) для извлечения и анализа артефактов реестра Windows `UserAssist` с живых систем или офлайн-дампов (`NTUSER.DAT`).*
 
+> **Download:** You can download the pre-compiled Windows executable directly from the [Releases page](https://github.com/NebbishHatter/windows-userassist-parser/releases). 
+> *Скачать готовый `.exe` файл (UA-Forensics.exe) можно в разделе [Releases](https://github.com/NebbishHatter/windows-userassist-parser/releases).*
+
 ---
 
-## English
+## 🇬🇧 English
 
 ### Overview
 The `UserAssist` registry key tracks GUI-based program executions (execution count and timestamps). Attackers often delete payloads and clear system logs, but `UserAssist` frequently retains the evidence. This tool parses these artifacts and applies threat-hunting heuristics to highlight suspicious activity.
@@ -20,9 +27,9 @@ The `UserAssist` registry key tracks GUI-based program executions (execution cou
   - `NIGHT_RUN`: Execution between 01:00 and 05:00 UTC.
 - **MITRE ATT&CK Mapping:** Tags findings with relevant technique IDs (e.g., T1036, T1029).
 - **SIEM Integration:** Outputs findings as JSON Lines (`--jsonl`) for SIEM ingestion.
-- **GUI & CLI:** Includes a dark-themed graphical interface and a command-line tool for automation.
+- **GUI & CLI:** Includes a dark-themed graphical interface (`UA-Forensics.exe`) and a command-line tool for automation.
 
-### Installation
+### Installation (from source)
 ```bash
 git clone https://github.com/NebbishHatter/windows-userassist-parser.git
 cd windows-userassist-parser
@@ -35,6 +42,7 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+*(Or simply run the pre-compiled `UA-Forensics.exe` from Releases)*
 
 **CLI:**
 ```bash
@@ -65,7 +73,7 @@ python userassist.py --jsonl --case INCIDENT-99
 
 ---
 
-## Русский
+## 🇷🇺 Русский
 
 ### Описание
 Ключ реестра `UserAssist` скрыто фиксирует запуски программ через Проводник (количество запусков и время). Злоумышленники часто удаляют файлы и чистят логи, но `UserAssist` сохраняет следы. Инструмент парсит эти артефакты и применяет эвристики Threat Hunting для выявления аномалий.
@@ -81,7 +89,7 @@ python userassist.py --jsonl --case INCIDENT-99
 - **Интеграция с SIEM:** Вывод в формате JSON Lines (`--jsonl`).
 - **GUI и CLI:** Темный графический интерфейс и консольная утилита для автоматизации.
 
-### Установка
+### Установка (из исходников)
 ```bash
 git clone https://github.com/NebbishHatter/windows-userassist-parser.git
 cd windows-userassist-parser
@@ -94,6 +102,7 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+*(Или просто запустите готовый файл `UA-Forensics.exe` из раздела Releases)*
 
 **Командная строка:**
 ```bash
@@ -116,4 +125,4 @@ python userassist.py --jsonl --case INCIDENT-99
 ---
 
 ## License / Лицензия
-MIT License. Developed by NebbishHatter.
+This project is licensed under the MIT License. Developed by NebbishHatter.
