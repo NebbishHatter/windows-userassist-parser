@@ -1,0 +1,4 @@
+{
+    "suspicious_paths": ["\\downloads\\", "\\temp\\", "\\desktop\\", "appdata\\local\\temp", "\\appdata\\roaming\\", "\\programdata\\"],
+    "system_binaries": ["svchost.exe", "lsass.exe", "cmd.exe", "explorer.exe", "winlogon.exe", "services.exe", "smss.exe", "csrss.exe", "taskhostw.exe", "rundll32.exe"]
+}
